@@ -1,0 +1,24 @@
+{% extends "user/userbase.html" %}
+{% block title%}
+POST DETAILS
+
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<table>
+			<form action="/post_details/" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<br>
+				{{ obj.as_table }}
+				<br>
+
+
+				<button type="submit">save</button><br>
+			</form>
+		</table><br>
+
+</div>
+
+{% endblock content %}
